@@ -104,7 +104,14 @@ body {
 
 }
 p::first-letter {
-    padding-left: 50px;
+    padding-left: 20px;
+    color: #e3ab59;
+}
+.red {
+    color: rgb(207, 82, 82);
+    font-size: 2em;
+}
+.yellow {
     color: #e3ab59;
 }
 
@@ -160,3 +167,17 @@ body::-webkit-scrollbar-thumb {
         padding: 10px;
     }
 }
+canvas div { background-color: rgba(0,0,0,0); }
+canvas {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    user-select:none;
+  }
+  #scene {
+    background-color: black;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    user-select:none;
+    width: 100%;
+  }
+  
