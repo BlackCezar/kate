@@ -105,6 +105,7 @@ body {
 }
 p::first-letter {
     padding-left: 50px;
+    color: #e3ab59;
 }
 
 body::-webkit-scrollbar {
@@ -148,5 +149,14 @@ body::-webkit-scrollbar-thumb {
     .text_div {
         top: 10vh;
         width: 95%;
+    }
+    .text_header {
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+    .text_cont {
+        font-size: 1.1em;
+        margin-top: 20px;
+        padding: 10px;
     }
 }
