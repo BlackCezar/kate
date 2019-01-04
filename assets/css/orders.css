@@ -1,0 +1,152 @@
+body {
+    background-image: url(../img/bg-andromeda.jpg);
+    background-size: cover;
+}
+
+header {
+    border-bottom: 0;
+}
+.container {
+    height: 88vh;
+    width: 100%;
+    display: flex;
+}
+.left-blog {
+    width: 80px;
+    background-color: rgba(133, 144, 209, 0.315);
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    box-shadow: 0px 0 5px 0;
+}
+
+.cont_div {
+    display: flex;
+    width: calc(100% - 80px);
+    background-color: rgba(165, 194, 236, 0.404);
+    height: calc(82vh - 2px);
+}
+.cont {
+    width: 50%; 
+    font-family:'Raleway';
+    padding: 10px;
+}
+
+
+.last {
+    box-shadow: 0px 0px 10px -2px #00000094
+}
+.cont h2 {
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    font-size: 1.8vw;
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+    color: rgb(49, 47, 70);
+    box-shadow: 0 0 5px 0px rgb(47, 45, 71);
+}
+.orders {
+    background-color: rgba(240, 240, 240, 0.863);
+    padding: 10px 0px;
+}
+.order > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.order {
+    transition: background 0.2s ease-in-out;
+}
+.order_title {
+    font-weight: 900;
+    padding: 5px;
+    font-size: 1.4vw;
+}
+.status {
+    padding: 5px;
+    font-size: 1.4vw;
+}
+.date {
+    padding-left: 3vw;
+    font-size: small;
+    color: royalblue;
+}
+.order_text {
+    padding: 10px;
+    font-size: 1.2vw;
+}
+.order:hover {
+    background-color: rgb(247, 247, 247);
+    cursor: pointer;
+}
+.more {
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    height: 6vh;
+    position: relative;
+    z-index: 0;
+}
+.array {
+    padding: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    content: url(../img/double-down.png);
+    width: 2vw;
+    transition: padding 0.2s linear;
+}
+.array:hover {
+    padding-top: 10px;
+}
+.results .orders {
+    overflow-y: scroll;
+}
+/*  */ 
+.creater {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+} 
+.overlay_Stich {
+    position: absolute;
+    left: 68%;
+    top: 34%;
+}
+
+.btn {
+    font-size: large;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    font-family: 'Raleway';
+    cursor: pointer;
+    box-shadow: unset;
+    padding: 10px 20px;
+    border-radius: 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    outline: unset;
+}
+.btn:hover {
+    background-color: rgba(245, 245, 245, 0.788);
+    color: rgba(34, 32, 59, 0.753);
+    border: 0px solid transparent;
+    
+}
+.circle {
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(118, 114, 153, 0.87);
+    background-color: rgba(161, 156, 199, 0.664);
+    border-radius: 100%;
+    position: absolute;
+    animation: buttonCircle 0.4s linear forwards;
+}
+@keyframes buttonCircle {
+    from {
+        transform: scale(0);
+    } to {
+        transform: scale(30);
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+    Бритиш Выдра, [10.11.18 23:45]
+<h1>Откройте исходный код страницы, чтобы увидеть образец формы</h1>
+
+<!-- Образец формы для оформления заказа -->
+<form action="https://start.bizon365.ru/subscriber/11910:generate/register" method="post">
+
+      <!--  *********************************
+            
+            Обязательные поля
+      
+            ********************************* -->
+
+      <!-- Ваш аккаунт в Бизоне. Замените XXXX на номер вашего аккаунта -->
+      <input type="hidden" name="uid" value="11910" />
+      
+      <!-- Имя -->
+      <input type="text" placeholder="Имя" name="firstname"/ >
+
+      <!-- email -->
+      <input type="text" placeholder="email" name="email"/>
+
+      <input type="hidden" name="duplicate_check" value="1"/>
+      <input type="submit" value="Зарегистрироваться">
+</form>
+
+
+<!-- опциональный скрипт для определения партнера из URL -->
+<script type="text/javascript">
+  (function(){
+    //  НАСТРОЙКА СКРИПТА 
+    // 1. задать актуальное название параметра в URL (url_key), содержащего refid партнера
+    // 2. задать селектор поля в форме, куда значение будет подставлено.
+    var params = [
+      {
+        url_key:  'partner',
+        input:    'input[name="refid"]',
+      },
+      {
+        url_key:  'ticket',
+        input:    'input[name="ticket"]',
+      },
+
+    ]
+
+    // 
+    // Код ниже изменять не нужно.
+    // 
+    function getUrlParams() {
+        var r = {};
+        try {
+          var args = window.location.search.slice(1).split('&');
+          for(var i=0; i<args.length; i++) {
+            var p = args[i];
+            if(!p) continue;
+            var a = p.split('=');
+            if(!a[0]) continue;
+            r[a[0]] = decodeURIComponent(a[1] || '');
+          }
+        } 
+        catch(e) { r = {}; }
+        return r;
+    }
+
+    function fillInputs(url_key, sel_key) {
+      var t = url_params[url_key] || '';
+      var inputs = document.querySelectorAll(sel_key);
+      for(var i=0; i<inputs.length; i++) {
+        inputs[i].value = t;
+      }
+    }
+
+    var url_params = getUrlParams();
+
+    for(var i=0; i<params.length; i++) {
+      var d = params[i];
+      fillInputs(d.url_key, d.input);      
+    }
+
+  })();
+</script>
+    </body>
+</html>

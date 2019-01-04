@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Exo';
+    src: url(Exo2-Light.ttf);
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Exo';
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: 6vh;
+    display: flex;
+    width: 100%;
+    background-color: rgb(241, 241, 236);
+}
+.logo {
+    width: 20vw;
+    text-align: center;
+    font-size: 2em;
+    border-right: 1px solid rgb(230, 230, 230);
+}
+nav {
+    width: calc(70vw - 1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    height: 94vh;
+    display: flex;
+
+}
+.left-menu {
+    width: 10vw;
+    border-right: 1px solid rgb(230, 230, 230);
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.nav-panel {
+    display: flex;
+    font-size: 2.2em;
+    width: 100%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 20px 0;
+    max-height: 50px;
+    position: relative;
+}
+.nav-panel div:last-child {
+    position: absolute;   
+    right: 20px;
+}
+.nav-panel div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.right-menu {
+    width: 5vw;
+    border-left: 1px solid rgb(230, 230, 230);
+}
+.calendar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+}
+.weeks {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+}
+.week-day {
+    width: 12%;
+    font-size: large;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(230, 230, 230, 0.158);
+    margin-right: 2%;
+}
+
+.days {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.day {
+    background-color: rgba(230, 230, 230, 0.158);
+    padding: 10px 0;
+    width: 12%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+.day:hover {
+    box-shadow: 0px 0px 1px rgb(107, 99, 99);
+}
+.day:nth-child(7n -1), .week-day:nth-child(6n), .week-day:nth-child(7n), .day:nth-child(7n) {
+    border-right: 1px solid rgb(201, 53, 53);
+}
+.day-zero {
+    background-color: rgba(133, 133, 133, 0.158);
+    cursor: unset;
+}
+.day-zero:hover {
+    box-shadow: unset;
+}

@@ -1,0 +1,152 @@
+body {
+    background-image: url(../img/bg-new.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #020202;
+    scroll-behavior: smooth;
+}
+.star {
+    box-shadow: 0 0 2px 1px white;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+
+    /* transition: all 0.3s ease-out; */
+    animation: move 2s ease-out  ; 
+}
+.st1 {
+    animation-name: move1;
+}
+.st2 {
+    animation-name: move2;
+    animation-delay: 1s;
+}
+.st3 {
+    animation-name: move3;
+    animation-delay: 2s;
+}
+.st4 {
+    animation-name: move4;
+    animation-delay: 5s;
+}
+@keyframes move1 {
+    0% {
+        top: 0%;
+        left: 15%;
+        opacity: 1;
+    }
+    100% {
+        top: 30%;
+        left: 40%;
+        opacity: 0;
+    }
+}
+@keyframes move2 {
+    0% {
+        top: 0%;
+        left: 65%;
+        opacity: 1;
+    }
+    100% {
+        top: 30%;
+        left: 60%;
+        opacity: 0;
+    }
+}
+@keyframes move3 {
+    0% {
+        top: 0%;
+        left: 15%;
+        opacity: 1;
+    }
+    100% {
+        top: 50%;
+        left: 20%;
+        opacity: 0;
+    }
+}
+@keyframes move4 {
+    0% {
+        top: 0%;
+        left: 100%;
+        opacity: 1;
+    }
+    100% {
+        top: 20%;
+        left: 40%;
+        opacity: 0;
+    }
+}
+
+.text_div {
+    position: relative;
+    top: 25vh;
+    border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke;
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    width: 90%;
+}
+.text_cont {
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.055);
+    
+}
+.text_header {
+    font-size: 5em;
+    color: #e3ab59;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 100px;
+
+}
+p::first-letter {
+    padding-left: 50px;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+ 
+body::-webkit-scrollbar-track {
+    /* -webkit-box-shadow */
+    background: transparent;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.89);
+  outline: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 560px) {
+    header {
+        height: unset;
+    }
+    nav {
+        display: none;
+    }
+    .logo {
+        padding: 5px;
+        border: 0;
+        margin: 0;
+        font-size: 2em;
+    }
+    .line {
+        display: none;
+    }
+    .logo span:first-child {
+        font-size: 2em;
+    }
+    .logo span:last-child {
+        font-size: 1em;
+    }
+    .text_div {
+        top: 10vh;
+        width: 95%;
+    }
+}
